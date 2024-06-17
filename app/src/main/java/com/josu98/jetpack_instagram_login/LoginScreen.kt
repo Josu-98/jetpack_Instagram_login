@@ -55,7 +55,29 @@ fun Footer(modifier: Modifier) {
             modifier = Modifier
                 .background(Color(0xFFF9F9F9))
                 .height(1.dp)
-                .weight(1f)
+                .fillMaxWidth()
+        )
+        Spacer(modifier = Modifier.size(12.dp))
+        SignUp()
+        Spacer(modifier = Modifier.size(12.dp))
+
+    }
+}
+
+@Composable
+fun SignUp() {
+    Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+        Text(
+            text = "Don't have an account?",
+            fontSize = 12.sp,
+            color = Color(0xFFB5B5B5)
+        )
+        Text(
+            text = "Sign up",
+            modifier = Modifier.padding(horizontal = 8.dp),
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFF4EA8E9)
         )
     }
 }
@@ -91,7 +113,11 @@ fun SocialLogin() {
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center
     ) {
-        Image(painter = painterResource(id = R.drawable.fb), contentDescription = "Facebook logo", modifier = Modifier.size(24.dp))
+        Image(
+            painter = painterResource(id = R.drawable.fb),
+            contentDescription = "Facebook logo",
+            modifier = Modifier.size(24.dp)
+        )
         Text(
             text = "Continue as Josue",
             fontSize = 14.sp,
